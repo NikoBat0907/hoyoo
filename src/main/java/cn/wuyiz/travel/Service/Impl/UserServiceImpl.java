@@ -30,7 +30,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean active(User user) {
-        return userDao.updateStatus(user);
+    public boolean active(String code) {
+        User u = userDao.findByCode(code);
+        if (u != null) {
+            u.setStatus("Y");
+            userDao.updateStatus(u);
+            return true;
+        } else {
+            return false;
+        }
     }
 }

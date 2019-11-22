@@ -14,8 +14,8 @@ public interface UserService {
     /**
      * 激活新用户账号
      *
-     * @param user
+     * @param code
      * @return
      */
-    boolean active(User user);
+    boolean active(String code);
 }

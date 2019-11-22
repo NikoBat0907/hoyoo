@@ -12,6 +12,14 @@ public interface UserDao {
     User findByUsername(String username);
 
     /**
+     * 根据激活码查询用户
+     *
+     * @param code
+     * @return
+     */
+    User findByCode(String code);
+
+    /**
      * 保存用户信息
      *
      * @param user
@@ -24,5 +32,5 @@ public interface UserDao {
      * @param user
      * @return
      */
-    boolean updateStatus(User user);
+    void updateStatus(User user);
 }
