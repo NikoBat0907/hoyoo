@@ -4,6 +4,15 @@ import cn.wuyiz.travel.bean.User;
 
 public interface UserService {
     /**
+     * 登录业务
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    User login(String username, String password);
+
+    /**
      * 注册用户
      *
      * @param user
@@ -19,11 +28,4 @@ public interface UserService {
      */
     boolean active(String code);
 
-    /**
-     * 登录业务
-     *
-     * @param user
-     * @return
-     */
-    User login(User user);
 }

@@ -12,6 +12,16 @@ public interface UserDao {
     User findByUsername(String username);
 
     /**
+     * 登录业务
+     * 通过用户名和密码查询用户是否存在
+     *
+     * @param user
+     * @return
+     */
+    User findByUsernameAndPassword(String username, String password);
+
+
+    /**
      * 根据激活码查询用户
      *
      * @param code
@@ -33,4 +43,5 @@ public interface UserDao {
      * @return
      */
     void updateStatus(User user);
+
 }

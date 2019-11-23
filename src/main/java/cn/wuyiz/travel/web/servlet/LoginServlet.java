@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
         }
         //调用service完成业务操作
         UserService service = new UserServiceImpl();
-        User u = service.login(user);
+        User u = service.login(user.getUsername(), user.getPassword());
         ResultInfo info = new ResultInfo();
         //判断账号密码
         if (u == null) {
@@ -63,7 +63,13 @@ public class LoginServlet extends HttpServlet {
         //判断用户状态
         if (u != null && !"Y".equals(u.getStatus())) {
             //用户尚未激活
-
+            info.setFlag(false);
+            info.setErrorMsg("用户尚未激活，请通过注册邮箱进行激活！");
+        }
+        //用户存在
+        if (u != null && "Y".equals(u.getStatus())) {
+            request.getSession().setAttribute("user", u);
+            info.setFlag(true);
         }
         //序列化对象
         ObjectMapper mapper = new ObjectMapper();

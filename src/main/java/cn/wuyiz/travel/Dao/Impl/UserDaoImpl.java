@@ -27,7 +27,23 @@ public class UserDaoImpl implements UserDao {
         } catch (DataAccessException e) {
             System.out.println("e.getMessage() = " + e.getMessage());
         }
-        sql = null;
+        return user;
+    }
+
+    @Override
+    public User findByUsernameAndPassword(String username, String password) {
+        //定义sql查询语句
+        sql = "select * from tab_user where username = ? and password = ?";
+        //查询结果并返回user对象
+        //使用Spring的JdbcTemplate查询数据库，获取List结果列表，数据库表字段和实体类自动对应，可以使用BeanPropertyRowMapper
+        //自动绑定，需要列名称和Java实体类名字一致，如：属性名 “userName” 可以匹配数据库中的列字段 "USERNAME" 或 “user_name”。这样，我们就不需要一个个手动绑定了，大大提高了开发效率
+        User user = null;
+        try {
+            //查询失败时候会报异常，而不是返回null
+            user = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), username, password);
+        } catch (DataAccessException e) {
+            System.out.println("e.getMessage() = " + e.getMessage());
+        }
         return user;
     }
 
@@ -40,7 +56,6 @@ public class UserDaoImpl implements UserDao {
         } catch (DataAccessException e) {
             e.printStackTrace();
         }
-        sql = null;
         return user;
     }
 
@@ -58,13 +73,11 @@ public class UserDaoImpl implements UserDao {
                 user.getEmail(),
                 user.getStatus(),
                 user.getCode());
-        sql = null;
     }
 
     @Override
     public void updateStatus(User user) {
         sql = "update tab_user set status = 'Y' where code = ?";
         template.update(sql, user.getCode());
-        sql = null;
     }
 }

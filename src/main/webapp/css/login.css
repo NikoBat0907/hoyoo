@@ -36,8 +36,11 @@
     border: 1px solid transparent;   
     text-align: left;
     color: #a94442;
+    background-color: #af1f1f00;
+    border-color: #ebccd100;
+    /*//默认样式
     background-color: #f2dede;
-    border-color: #ebccd1;
+    border-color: #ebccd1;*/
     margin-bottom: 17px;
     font-size: 12px;
 }

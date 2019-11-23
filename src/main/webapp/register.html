@@ -21,6 +21,16 @@
             return flag;
         }
 
+        //判断用户名是否已经注册过
+        /*function isExistUsername() {
+            var username = $("#username").val();
+            if (username != null && username != ""){
+                $.post("isExistServlet",username.serialize(),function (data) {
+                    return data.flag;
+                });
+            }
+        }*/
+
         //校验密码
         //以字母开头，长度在6~18之间，只能包含字母、数字和&?_!$
         function checkPassword() {
@@ -100,6 +110,7 @@
                             $("#errorMsg").html(data.errorMsg);
                             //刷新验证码
                             $("#checkCode").click();
+                            $("input[name='check']").val("").focus();
                         }
                     });
                 }

@@ -11,6 +11,11 @@ public class UserServiceImpl implements UserService {
     UserDao userDao = new UserDaoImpl();
 
     @Override
+    public User login(String username, String password) {
+        return userDao.findByUsernameAndPassword(username, password);
+    }
+
+    @Override
     public boolean regist(User user) {
         //1.根据用户名查询用户对象
         User u = userDao.findByUsername(user.getUsername());
@@ -39,11 +44,5 @@ public class UserServiceImpl implements UserService {
         } else {
             return false;
         }
-    }
-
-    @Override
-    public User login(User user) {
-
-        return user;
     }
 }
