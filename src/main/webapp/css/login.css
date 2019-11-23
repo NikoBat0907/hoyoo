@@ -16,7 +16,7 @@
 .title {
     height: 80px;
     line-height: 80px;
-    background: #ffc900;
+    background: #eaac20;
     font-size: 22px;
     padding:0 30px; 
 }
@@ -73,7 +73,7 @@
     width: 120px;
     height: 40px;
     border: none;
-    background-color: #ffa800;   
+    background-color: #ffd41c;
     text-align: center;
     line-height: 40px;
     color: #000;

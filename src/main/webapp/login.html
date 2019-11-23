@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>携程旅游网-登录</title>
+	<title>狐游天下旅游网-登录</title>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -18,6 +18,22 @@
     <script src="js/angular.min.js"></script>
 	<!--导入jquery-->
 	<script src="js/jquery-3.3.1.js"></script>
+	<script>
+		$(function () {
+			$("#btn_sub").click(function () {
+				$.post("loginServlet", $("#loginForm").serialize(), function (data) {
+					if (data.flag) {
+
+					} else {
+						$("#errorMsg").html(data.errorMsg);
+						//刷新验证码
+						$("#checkCode").click();
+					}
+				});
+			});
+			return false;
+		});
+	</script>
 </head>
 
 <body>
@@ -31,7 +47,7 @@
         <div class="login-box">
         	<div class="title">
         		<img src="images/login_logo.png" alt="">
-        		<span>欢迎登录黑马旅游账户</span>
+				<span>欢迎登录狐游天下</span>
         	</div>
         	<div class="login_inner">
 				
@@ -43,7 +59,7 @@
         			<input name="password" type="text" placeholder="请输入密码" autocomplete="off">
         			<div class="verify">
 					<input name="check" type="text" placeholder="请输入验证码" autocomplete="off">
-					<span><img src="checkCode" alt="" onclick="changeCheckCode(this)"></span>
+						<span><img src="checkCode" alt="" id="checkCode" onclick="changeCheckCode(this)"></span>
 					<script type="text/javascript">
 						//图片点击事件
 						function changeCheckCode(img) {
@@ -52,7 +68,7 @@
 					</script>
 			</div>
 			<div class="submit_btn">
-        				<button type="button">登录</button>
+				<button type="button" id="btn_sub">登录</button>
         				<div class="auto_login">
         					<input type="checkbox" name="" class="checkbox">
         					<span>自动登录</span>
