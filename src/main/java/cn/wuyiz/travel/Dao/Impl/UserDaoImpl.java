@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 public class UserDaoImpl implements UserDao {
     //定义sql语句对象
-    String sql = null;
+    private String sql = null;
     //定义连接池模板
     private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
 
