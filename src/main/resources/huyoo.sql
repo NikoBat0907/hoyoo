@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : phpStudy
 Source Server Version : 50553
 Source Host           : localhost:3306
-Source Database       : travel
+Source Database       : huyoo
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-11-21 23:48:35
+Date: 2019-11-25 11:18:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -2737,8 +2737,4 @@ CREATE TABLE `tab_user` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `AK_nq_username` (`username`),
   UNIQUE KEY `AK_nq_code` (`code`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of tab_user
--- ----------------------------
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;

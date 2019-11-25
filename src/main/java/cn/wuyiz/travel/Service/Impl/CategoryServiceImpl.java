@@ -31,6 +31,7 @@ public class CategoryServiceImpl implements CategoryService {
             }
         } else {
             //redis有缓存数据
+            System.out.println("Redis查询");
             categoryList = new ArrayList<>();
             for (String name : categorySet) {
                 //封装数据，并存入list集合中
