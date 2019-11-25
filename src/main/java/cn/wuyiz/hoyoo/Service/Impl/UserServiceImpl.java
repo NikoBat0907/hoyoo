@@ -1,11 +1,11 @@
-package cn.wuyiz.travel.Service.Impl;
+package cn.wuyiz.hoyoo.Service.Impl;
 
-import cn.wuyiz.travel.Dao.Impl.UserDaoImpl;
-import cn.wuyiz.travel.Dao.UserDao;
-import cn.wuyiz.travel.Service.UserService;
-import cn.wuyiz.travel.bean.User;
-import cn.wuyiz.travel.utils.MailUtils;
-import cn.wuyiz.travel.utils.UuidUtil;
+import cn.wuyiz.hoyoo.Dao.Impl.UserDaoImpl;
+import cn.wuyiz.hoyoo.Dao.UserDao;
+import cn.wuyiz.hoyoo.Service.UserService;
+import cn.wuyiz.hoyoo.bean.User;
+import cn.wuyiz.hoyoo.utils.MailUtils;
+import cn.wuyiz.hoyoo.utils.UuidUtil;
 
 public class UserServiceImpl implements UserService {
     private UserDao userDao = new UserDaoImpl();

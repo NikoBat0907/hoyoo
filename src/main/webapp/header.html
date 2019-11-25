@@ -10,7 +10,7 @@
             var li = '<li class="nav-active"><a href="index.html">狐游首页</a></li>';
             //遍历
             for (var i = 0; i < data.length; i++) {
-                li += '<li><a href="route_list.html">' + data[i].cname + '</a></li>';
+                li += '<li><a href="route_list.html?cid=' + data[i].cid + '">' + data[i].cname + '</a></li>';
             }
             //拼接收藏排行榜
             li += '<li><a href="favoriterank.html">收藏排行榜</a></li>';

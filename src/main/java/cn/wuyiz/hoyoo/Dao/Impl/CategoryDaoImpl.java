@@ -1,8 +1,8 @@
-package cn.wuyiz.travel.Dao.Impl;
+package cn.wuyiz.hoyoo.Dao.Impl;
 
-import cn.wuyiz.travel.Dao.CategoryDao;
-import cn.wuyiz.travel.bean.Category;
-import cn.wuyiz.travel.utils.JDBCUtils;
+import cn.wuyiz.hoyoo.Dao.CategoryDao;
+import cn.wuyiz.hoyoo.bean.Category;
+import cn.wuyiz.hoyoo.utils.JDBCUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 

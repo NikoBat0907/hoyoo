@@ -1,4 +1,4 @@
-package cn.wuyiz.travel.utils;
+package cn.wuyiz.hoyoo.utils;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;

@@ -1,7 +1,7 @@
-package cn.wuyiz.travel.web.servlet;
+package cn.wuyiz.hoyoo.web.servlet;
 
-import cn.wuyiz.travel.Service.Impl.UserServiceImpl;
-import cn.wuyiz.travel.Service.UserService;
+import cn.wuyiz.hoyoo.Service.Impl.UserServiceImpl;
+import cn.wuyiz.hoyoo.Service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

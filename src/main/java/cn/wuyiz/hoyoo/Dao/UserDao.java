@@ -1,6 +1,6 @@
-package cn.wuyiz.travel.Dao;
+package cn.wuyiz.hoyoo.Dao;
 
-import cn.wuyiz.travel.bean.User;
+import cn.wuyiz.hoyoo.bean.User;
 
 public interface UserDao {
     /**

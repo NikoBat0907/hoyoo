@@ -1,4 +1,4 @@
-package cn.wuyiz.travel.bean;
+package cn.wuyiz.hoyoo.bean;
 
 import java.io.Serializable;
 

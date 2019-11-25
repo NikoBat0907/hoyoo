@@ -1,6 +1,6 @@
-package cn.wuyiz.travel.Service;
+package cn.wuyiz.hoyoo.Service;
 
-import cn.wuyiz.travel.bean.User;
+import cn.wuyiz.hoyoo.bean.User;
 
 public interface UserService {
     /**

@@ -1,4 +1,4 @@
-package cn.wuyiz.travel.web.servlet;
+package cn.wuyiz.hoyoo.web.servlet;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;

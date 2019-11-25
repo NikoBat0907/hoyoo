@@ -1,11 +1,12 @@
-package cn.wuyiz.travel.Service.Impl;
+package cn.wuyiz.hoyoo.Service.Impl;
 
-import cn.wuyiz.travel.Dao.CategoryDao;
-import cn.wuyiz.travel.Dao.Impl.CategoryDaoImpl;
-import cn.wuyiz.travel.Service.CategoryService;
-import cn.wuyiz.travel.bean.Category;
-import cn.wuyiz.travel.utils.JedisUtils;
+import cn.wuyiz.hoyoo.Dao.CategoryDao;
+import cn.wuyiz.hoyoo.Dao.Impl.CategoryDaoImpl;
+import cn.wuyiz.hoyoo.Service.CategoryService;
+import cn.wuyiz.hoyoo.bean.Category;
+import cn.wuyiz.hoyoo.utils.JedisUtils;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Tuple;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +19,11 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<Category> findAll() {
-        Set<String> categorySet = jedis.zrange("category", 0, -1);
+        //查询sortedSet中的分数和name
+        Set<Tuple> tuples = jedis.zrangeWithScores("category", 0, -1);
         List<Category> categoryList = null;
         //判断缓存
-        if (categorySet == null || categorySet.isEmpty()) {
+        if (tuples == null || tuples.size() == 0) {
             System.out.println("MySQL查询");
             //第一次查询，没有缓存，查询数据库
             categoryList = categoryDao.findAll();
@@ -33,10 +35,11 @@ public class CategoryServiceImpl implements CategoryService {
             //redis有缓存数据
             System.out.println("Redis查询");
             categoryList = new ArrayList<>();
-            for (String name : categorySet) {
+            for (Tuple tuple : tuples) {
                 //封装数据，并存入list集合中
                 Category category = new Category();
-                category.setCname(name);
+                category.setCid((int) tuple.getScore());
+                category.setCname(tuple.getElement());
                 categoryList.add(category);
             }
         }

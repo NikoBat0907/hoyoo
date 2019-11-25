@@ -1,8 +1,8 @@
-package cn.wuyiz.travel.web.servlet;
+package cn.wuyiz.hoyoo.web.servlet;
 
-import cn.wuyiz.travel.Service.CategoryService;
-import cn.wuyiz.travel.Service.Impl.CategoryServiceImpl;
-import cn.wuyiz.travel.bean.Category;
+import cn.wuyiz.hoyoo.Service.CategoryService;
+import cn.wuyiz.hoyoo.Service.Impl.CategoryServiceImpl;
+import cn.wuyiz.hoyoo.bean.Category;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,6 +1,6 @@
-package cn.wuyiz.travel.Service;
+package cn.wuyiz.hoyoo.Service;
 
-import cn.wuyiz.travel.bean.Category;
+import cn.wuyiz.hoyoo.bean.Category;
 
 import java.util.List;
 

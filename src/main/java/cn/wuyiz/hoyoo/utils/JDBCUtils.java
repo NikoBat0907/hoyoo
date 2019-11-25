@@ -1,4 +1,4 @@
-package cn.wuyiz.travel.utils;
+package cn.wuyiz.hoyoo.utils;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.alibaba.druid.util.JdbcUtils;

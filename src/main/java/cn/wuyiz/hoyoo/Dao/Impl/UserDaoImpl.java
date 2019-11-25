@@ -1,8 +1,8 @@
-package cn.wuyiz.travel.Dao.Impl;
+package cn.wuyiz.hoyoo.Dao.Impl;
 
-import cn.wuyiz.travel.Dao.UserDao;
-import cn.wuyiz.travel.bean.User;
-import cn.wuyiz.travel.utils.JDBCUtils;
+import cn.wuyiz.hoyoo.Dao.UserDao;
+import cn.wuyiz.hoyoo.bean.User;
+import cn.wuyiz.hoyoo.utils.JDBCUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

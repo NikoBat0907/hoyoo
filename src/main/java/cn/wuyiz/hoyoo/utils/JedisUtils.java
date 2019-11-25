@@ -1,4 +1,4 @@
-package cn.wuyiz.travel.utils;
+package cn.wuyiz.hoyoo.utils;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

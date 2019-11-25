@@ -1,6 +1,6 @@
-package cn.wuyiz.travel.web.servlet;
+package cn.wuyiz.hoyoo.web.servlet;
 
-import cn.wuyiz.travel.bean.ResultInfo;
+import cn.wuyiz.hoyoo.bean.ResultInfo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

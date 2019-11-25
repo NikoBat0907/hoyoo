@@ -1,9 +1,9 @@
-package cn.wuyiz.travel.web.servlet;
+package cn.wuyiz.hoyoo.web.servlet;
 
-import cn.wuyiz.travel.Service.Impl.UserServiceImpl;
-import cn.wuyiz.travel.Service.UserService;
-import cn.wuyiz.travel.bean.ResultInfo;
-import cn.wuyiz.travel.bean.User;
+import cn.wuyiz.hoyoo.Service.Impl.UserServiceImpl;
+import cn.wuyiz.hoyoo.Service.UserService;
+import cn.wuyiz.hoyoo.bean.ResultInfo;
+import cn.wuyiz.hoyoo.bean.User;
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;

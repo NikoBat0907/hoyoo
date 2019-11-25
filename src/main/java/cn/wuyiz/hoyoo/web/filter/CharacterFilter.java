@@ -1,4 +1,4 @@
-package cn.wuyiz.travel.web.filter;
+package cn.wuyiz.hoyoo.web.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
